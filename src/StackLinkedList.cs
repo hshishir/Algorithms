@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace Algorithms
 {
-    public class StackLinkedList
+    public class StackLinkedList<T>
     {
         private Node head;
         private int count;
         private class Node
         {
-            public string item;
+            public T data;
             public Node next;
 
-            public Node(string str)
+            public Node(T item)
             {
-                item = str;
+                data = item;
                 next = null;
             }
         }
 
-        public void Push(string item)
+        public void Push(T item)
         {
             var oldHead = head;
             head = new Node(item);
@@ -30,18 +30,18 @@ namespace Algorithms
             count++;
         }
 
-        public string Pop()
+        public T Pop()
         {
             if (head == null)
             {
-                return string.Empty;
+                return default(T);
             }
 
             var tmp = head;
             head = head.next;
-            var str = tmp.item;
+            var value = tmp.data;
             tmp = null;
-            return str;
+            return value;
         }
 
         public bool IsEmpty()
@@ -53,20 +53,34 @@ namespace Algorithms
         {
             return count;
         }
+
+        public void DisplayList()
+        {
+            var curr = head;
+            var str = string.Empty;
+            while (curr != null)
+            {
+                str += $"{curr.data}->";
+                curr = curr.next;
+            }
+
+            Console.WriteLine(str);
+        }
     }
 
     public class StackLinkedListTest
     {
         public static void Execute()
         {
-            var sl = new StackLinkedList();
-            sl.Push("hemang");
-            sl.Push("is");
-            sl.Push("my");
-            sl.Push("name");
-
+            var sl = new StackLinkedList<string>();
+            sl.Push("one");
+            sl.Push("two");
+            sl.Push("three");
+            sl.Push("four");
+            sl.DisplayList();
             System.Console.WriteLine(sl.Pop());
             System.Console.WriteLine(sl.Pop());
+            sl.DisplayList();
         }
     }
 }

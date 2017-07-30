@@ -6,7 +6,9 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            StackLinkedListTest.Execute();
+            var ee = new EvaluateExpression();
+            var expression = "{ 1 + 2 } * { 3 + 4 }";
+            ee.Run(expression);
         }
     }
 }
