@@ -6,9 +6,7 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            var ee = new EvaluateExpression();
-            var expression = "{ 1 + 2 } * { 3 + 4 }";
-            ee.Run(expression);
+            DequeueArrayTest.Execute();
         }
     }
 }

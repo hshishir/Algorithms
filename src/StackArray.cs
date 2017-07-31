@@ -38,6 +38,7 @@ namespace Algorithms
             {
                 Resize(array.Length / 2);
             }
+            
             return array[--count];
         }
 
