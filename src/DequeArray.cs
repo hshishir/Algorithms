@@ -23,17 +23,64 @@ namespace Algorithms
         {
             if (first == -1)
             {
-                array[++first] = data;
+                first = 0;
+                last = 0;
             }
             else if (first > 0)
             {
-                array[--first] = data;
+                first = first - 1;
             }
             else
             {
                 first = array.Length - 1;
-                array[first] = data;
             }
+
+            array[first] = data;
+        }
+
+        public void DeleteStart()
+        {
+            array[first] = default(T);
+            if (first < array.Length - 1)
+            {
+                first = first + 1;
+            }
+            else
+            {
+                first = 0;
+            }
+        }
+
+        public void DeleteEnd()
+        {
+            array[last] = default(T);
+            if (last == 0)
+            {
+                last = array.Length - 1;
+            }
+            else
+            {
+                last = last - 1;
+            }
+        }
+
+        public void AddEnd(T data)
+        {
+            if (first == -1)
+            {
+                last = 0;
+                first = 0;
+            }
+            else if (last == array.Length - 1)
+            {
+                last = 0;
+            }
+            else
+            {
+                last++;
+            }
+
+            array[last] = data;
         }
 
         public void Display()
@@ -51,6 +98,11 @@ namespace Algorithms
         {
             return array[first];
         }
+
+        public T GetLast()
+        {
+            return array[last];
+        }
     }
 
     public class DequeueArrayTest
@@ -61,9 +113,12 @@ namespace Algorithms
             qa.AddStart(1);
             qa.AddStart(2);
             qa.AddStart(3);
-            qa.AddStart(4);
-            qa.AddStart(5);
-
+            qa.Display();
+            System.Console.WriteLine(qa.GetFirst());
+            qa.DeleteStart();
+            System.Console.WriteLine(qa.GetFirst());
+            qa.DeleteStart();
+            System.Console.WriteLine(qa.GetFirst());
             qa.Display();
         }
     }
