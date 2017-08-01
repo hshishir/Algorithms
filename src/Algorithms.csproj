@@ -55,6 +55,7 @@
     <Compile Include="QueueLinkedList.cs" />
     <Compile Include="QuickUnion.cs" />
     <Compile Include="QuickFind.cs" />
+    <Compile Include="SelectionSort.cs" />
     <Compile Include="StackArray.cs" />
     <Compile Include="StackLinkedList.cs" />
     <Compile Include="WeightedQuickUnion.cs" />
