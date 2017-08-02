@@ -48,8 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CircularArray.cs" />
+    <Compile Include="Common.cs" />
     <Compile Include="DequeArray.cs" />
     <Compile Include="EvaluateExpression.cs" />
+    <Compile Include="InsertionSort.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueueLinkedList.cs" />
