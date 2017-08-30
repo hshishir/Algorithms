@@ -52,12 +52,15 @@
     <Compile Include="DequeArray.cs" />
     <Compile Include="EvaluateExpression.cs" />
     <Compile Include="InsertionSort.cs" />
+    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueueLinkedList.cs" />
+    <Compile Include="QuickSort.cs" />
     <Compile Include="QuickUnion.cs" />
     <Compile Include="QuickFind.cs" />
     <Compile Include="SelectionSort.cs" />
+    <Compile Include="ShuffleUsingSort.cs" />
     <Compile Include="StackArray.cs" />
     <Compile Include="StackLinkedList.cs" />
     <Compile Include="WeightedQuickUnion.cs" />

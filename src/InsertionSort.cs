@@ -8,17 +8,19 @@ namespace Algorithms
 {
     public class InsertionSort<T> where T : IComparable<T>
     {
-        private T[] array;
-
-        public void Sort(T[] data)
+        public void Sort(T[] a)
         {
-            for (int i = 0; i < data.Length; i++)
+            for (int i = 0; i < a.Length; i++)
             {
                 for (int j = i; j > 0; j--)
                 {
-                    if (data[j].CompareTo(data[j-1]) < 0)
+                    if (a[j].CompareTo(a[j-1]) < 0)
                     {
-                        Exchange(data, j, j-1);
+                        Exchange(a, j, j-1);
+                    }
+                    else
+                    {
+                        break;
                     }
                 }
             }
@@ -29,6 +31,17 @@ namespace Algorithms
             var tmp = array[p];
             array[p] = array[q];
             array[q] = tmp;
+        }
+    }
+
+    public class InsertionSortTest
+    {
+        public static void Execute()
+        {
+            var a = new int[] {2,3,6,5,1,4};
+            var isort = new InsertionSort<int>();
+            isort.Sort(a);
+            Console.WriteLine("Complete!");
         }
     }
 }
