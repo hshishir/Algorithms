@@ -17,7 +17,7 @@ namespace Algorithms
             }
             var sb = s.ToCharArray();
             var rs = string.Empty;
-            for (int i = s.Length -1; i >= 0; i--)
+            for (int i = s.Length - 1; i >= 0; i--)
             {
                 rs += sb[i];
             }
@@ -28,7 +28,7 @@ namespace Algorithms
         public bool IsPalindrome(string s)
         {
             var sb = s.ToCharArray();
-            for (int i = 0, j=sb.Length -1; i < j; i++, j--)
+            for (int i = 0, j = sb.Length - 1; i < j; i++, j--)
             {
                 if (sb[i] != sb[j])
                 {
@@ -81,7 +81,7 @@ namespace Algorithms
             var sb = s.ToCharArray();
             var cmap = new Dictionary<char, int>();
             int i = 0;
-            for (int j = 0; i < s.Length & j < s.Length ; j++)
+            for (int j = 0; i < s.Length & j < s.Length; j++)
             {
                 if (!cmap.ContainsKey(sb[j]))
                 {
@@ -124,6 +124,24 @@ namespace Algorithms
                 cmap.Add(rb[i]);
             }
 
+            var sb = s.ToCharArray();
+            var x = 0;
+            for (int j = 0; j < s.Length; j++)
+            {
+                if (!cmap.Contains(sb[j]))
+                {
+                    sb[x++] = sb[j];
+                }
+            }
+
+            sb[x] = '\0';
+            var rs = new string(sb, 0, x);
+            System.Console.WriteLine($"Removed given characters: {rs}");
+        }
+
+        
+        public void ReverseWords(string s)
+        {
             
         }
     }
