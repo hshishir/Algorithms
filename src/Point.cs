@@ -18,7 +18,7 @@ namespace Algorithms
 
         public int CounterClockWise(Point a, Point b, Point c)
         {
-            var area = 
+            return 0;
         }
     }
 }

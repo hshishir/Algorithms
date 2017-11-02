@@ -63,6 +63,7 @@
     <Compile Include="ShuffleUsingSort.cs" />
     <Compile Include="StackArray.cs" />
     <Compile Include="StackLinkedList.cs" />
+    <Compile Include="Strings\Manipulation.cs" />
     <Compile Include="WeightedQuickUnion.cs" />
   </ItemGroup>
   <ItemGroup>

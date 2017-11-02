@@ -6,7 +6,8 @@ namespace Algorithms
     {
         public static void Main(string[] args)
         {
-            QuickSortTest.Execute();
+            ManipulationTest.Execute();
+            Console.WriteLine("Complete!");
         }
     }
 }
