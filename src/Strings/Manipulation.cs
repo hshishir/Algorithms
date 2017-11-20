@@ -8,7 +8,10 @@ namespace Algorithms
 {
     public class Manipulation
     {
-
+        // Commit A
+        // Commit B
+        // Commit C
+        // Commit D
         public string Reverse(string s)
         {
             if (string.IsNullOrWhiteSpace(s))
